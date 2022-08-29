@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 # Sets project name
 project(lab02 LANGUAGES CXX C)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,6 +20,7 @@ find_package(Qt6 REQUIRED COMPONENTS Gui)
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
   main.cpp
+  
   mainwindow.cpp
   ui/supportcanvas2d.cpp
   ui/colorcanvas.cpp
@@ -29,15 +31,13 @@ add_executable(${PROJECT_NAME}
   ui/colorcanvas.h
   ui/graycanvas.h
   RGBA.h
-
 )
 
-# Specifies libraries to be linked (Qt components, glew, glm, etc)
+# Specifies libraries to be linked (Qt components, glew, etc)
 target_link_libraries(${PROJECT_NAME} PRIVATE
   Qt::Core
   Qt::Widgets
   Qt::Gui
-
 )
 
 # Set this flag to silence warnings on Windows
