@@ -1,5 +1,4 @@
-#ifndef SUPPORTCANVAS2D_H
-#define SUPPORTCANVAS2D_H
+#pragma once
 
 #include <QWidget>
 #include <QLabel>
@@ -43,5 +42,3 @@ private:
     void scaleGray(int smallIndex, int bigIndex);
     void scaleColor(int smallIndex, int bigIndex);
 };
-
-#endif // SUPPORTCANVAS2D_H

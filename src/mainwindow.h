@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include "ui/supportcanvas2d.h"
 #include <QMainWindow>
@@ -17,4 +16,3 @@ public:
 private:
     SupportCanvas2D *m_supportcanvas;
 };
-#endif // MAINWINDOW_H

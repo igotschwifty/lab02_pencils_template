@@ -1,5 +1,4 @@
-#ifndef RGBA_H
-#define RGBA_H
+#pragma once
 
 struct RGBA {
     int r;
@@ -7,5 +6,3 @@ struct RGBA {
     int b;
     int a;
 };
-
-#endif // RGBA_H

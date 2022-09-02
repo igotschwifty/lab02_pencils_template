@@ -17,20 +17,23 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Gui)
 
+# Allows you to include files from within those directories, without prefixing their filepaths
+include_directories(src)
+
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
-  main.cpp
+  src/main.cpp
   
-  mainwindow.cpp
-  ui/supportcanvas2d.cpp
-  ui/colorcanvas.cpp
-  ui/graycanvas.cpp
+  src/mainwindow.cpp
+  src/ui/supportcanvas2d.cpp
+  src/ui/colorcanvas.cpp
+  src/ui/graycanvas.cpp
 
-  mainwindow.h
-  ui/supportcanvas2D.h
-  ui/colorcanvas.h
-  ui/graycanvas.h
-  RGBA.h
+  src/mainwindow.h
+  src/ui/supportcanvas2D.h
+  src/ui/colorcanvas.h
+  src/ui/graycanvas.h
+  src/RGBA.h
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)

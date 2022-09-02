@@ -1,16 +1,15 @@
 #include "supportcanvas2d.h"
-
 #include <iostream>
 
 void SupportCanvas2D::initializeCanvas(std::string canvasType) {
-    // allows for leaky pencil to work
+    // Allows for leaky pencil to work
     setMouseTracking(true);
 
     m_canvasType = canvasType;
     m_canvasW = 500;
     m_canvasH = 500;
 
-    // initializes a black canvas
+    // Initializes a black canvas
     for (int i = 0; i < 250000; i++) {
         m_data.push_back(0);
         m_data.push_back(0);
@@ -30,7 +29,7 @@ void SupportCanvas2D::initializeCanvas(std::string canvasType) {
 }
 
 void SupportCanvas2D::colorCanvas() {
-    // scales to 500 x 500 canvas to be a 10 x 10 canvas
+    // Scales to 500 x 500 canvas to be a 10 x 10 canvas
     scaleCanvas();
 
     std::vector<uint8_t> *buf;
@@ -44,12 +43,12 @@ void SupportCanvas2D::colorCanvas() {
     this->show();
 }
 
-// this function scales the 500 x 500 pixel canvas to be a 10 x 10 canvas (allows for
+// This function scales the 500 x 500 pixel canvas to be a 10 x 10 canvas (allows for
 // easier visualization
 void SupportCanvas2D::scaleCanvas() {
-    // for each pixel in the 10x10 canvas
+    // For each pixel in the 10x10 canvas
     for (int i = 0; i < 100; i++) {
-        // calculates the (x and y) start and end indices in a 500x500 canvas
+        // Calculates the (x and y) start and end indices in a 500x500 canvas
         int xStart = (i % 10) * 50;
         int xEnd = xStart + 50;
         int yStart = (i / 10) * 50;
@@ -57,7 +56,7 @@ void SupportCanvas2D::scaleCanvas() {
 
         for (int currY = yStart; currY < yEnd; currY++) {
             for (int currX = xStart; currX < xEnd; currX++) {
-                // calculates the index in m_image (2000 indices make up a row bc of the RGBA channels)
+                // Calculates the index in m_image (2000 indices make up a row bc of the RGBA channels)
                 int index = currY * 2000 + currX * 4;
 
                 if (m_canvasType == "grayscale") {

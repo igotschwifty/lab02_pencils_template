@@ -1,5 +1,4 @@
-#ifndef GRAYCANVAS_H
-#define GRAYCANVAS_H
+#pragma once
 
 #include <vector>
 #include <stdint.h>
@@ -16,5 +15,3 @@ private:
     std::vector<uint8_t> m_canvasData;
     uint8_t floatToInt(float intensity);
 };
-
-#endif // GRAYCANVAS_H

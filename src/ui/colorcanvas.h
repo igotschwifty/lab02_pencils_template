@@ -1,9 +1,7 @@
-#ifndef COLORCANVAS_H
-#define COLORCANVAS_H
+#pragma once
 
 #include <vector>
 #include "RGBA.h"
-
 
 class ColorCanvas
 {
@@ -26,5 +24,3 @@ private:
     void drawFlower(int x, int y);
     int posToIndex(int x, int y);
 };
-
-#endif // COLORCANVAS_H
