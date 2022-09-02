@@ -30,7 +30,7 @@ add_executable(${PROJECT_NAME}
   src/ui/graycanvas.cpp
 
   src/mainwindow.h
-  src/ui/supportcanvas2D.h
+  src/ui/supportcanvas2d.h
   src/ui/colorcanvas.h
   src/ui/graycanvas.h
   src/RGBA.h
