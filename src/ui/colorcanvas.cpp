@@ -1,6 +1,8 @@
 #include "colorcanvas.h"
+#include "RGBA.h"
 
 void ColorCanvas::initializeColorCanvas() {
+
     // Task 6: initialize a 10 x 10 colorful canvas where each pixel has an
     //         RGBA value of (0, 123, 123, 255)
 
@@ -21,19 +23,20 @@ void ColorCanvas::drawFlower(int x, int y) {
 }
 
 void ColorCanvas::mouseDown(int x, int y) {
-    // Task 10: color the pixel corresponding to the input (x, y) coordinate
-    //          of the canvas to handle when the mouse is clicked
+    // Task 10: update the variable that keeps track of whether the LMB is being
+    //          held down, then color the pixel corresponding to the input (x, y)
+    //          coordinate, if within canvas bounds
 }
 
 void ColorCanvas::mouseMove(int x, int y) {
-    // Task 9: color the pixel corresponding to the input (x, y) coordinate
-    //         of the canvas to handle mouse movement
+    // Task 9: color the pixel corresponding to the input (x, y) coordinate, if
+    //         within canvas bounds
 
     // Task 10: update this function from the previous task so that the coloring
-    //          of the canvas only happens when the mouse is first pressed
+    //          of the canvas only happens if the LMB is being held down
 }
 
 void ColorCanvas::mouseUp(int x, int y) {
-    // Task 10: update the variable that keeps track of whether the mouse has
-    //          been clicked
+    // Task 10: update the variable that keeps track of whether the LMB is being
+    //          held down
 }

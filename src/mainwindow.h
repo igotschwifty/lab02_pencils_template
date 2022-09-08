@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ui/supportcanvas2d.h"
 #include <QMainWindow>
+#include "ui/supportcanvas2d.h"
 
 class MainWindow : public QWidget
 {

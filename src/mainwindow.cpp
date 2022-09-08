@@ -1,6 +1,5 @@
-#include "mainwindow.h"
-
 #include <QHBoxLayout>
+#include "mainwindow.h"
 
 void MainWindow::canvasSetup(QStringList args) {
     // parses the command line arguments

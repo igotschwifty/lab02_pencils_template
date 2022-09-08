@@ -1,5 +1,5 @@
-#include "graycanvas.h"
 #include <cmath>
+#include "graycanvas.h"
 
 uint8_t GrayCanvas::floatToInt(float intensity) {
     // Task 3: convert a float into a uint8_t

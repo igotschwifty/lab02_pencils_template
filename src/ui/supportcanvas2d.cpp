@@ -1,5 +1,5 @@
-#include "supportcanvas2d.h"
 #include <iostream>
+#include "supportcanvas2d.h"
 
 void SupportCanvas2D::initializeCanvas(std::string canvasType) {
     // Allows for leaky pencil to work
@@ -92,36 +92,40 @@ void SupportCanvas2D::scaleColor(int smallIndex, int bigIndex) {
 void SupportCanvas2D::mousePressEvent(QMouseEvent *event) {
     if (m_canvasType == "grayscale") {
         std::cout << "Canvas must be color in order to use the pencil" << std::endl;
-    } else if (m_canvasType == "color") {
-        int x = event->pos().x() / 50;
-        int y = event->pos().y() / 50;
-
-        m_colorCanvas->mouseDown(x, y);
-        colorCanvas();
+        return;
     }
+
+    int x = event->pos().x() / 50;
+    int y = event->pos().y() / 50;
+
+    m_colorCanvas->mouseDown(x, y);
+    colorCanvas();
 }
 
 void SupportCanvas2D::mouseMoveEvent(QMouseEvent *event) {
-    if (m_canvasType == "color") {
-        int x = event->pos().x() / 50;
-        int y = event->pos().y() / 50;
-
-        m_colorCanvas->mouseMove(x, y);
-        colorCanvas();
+    if (m_canvasType == "grayscale") {
+        std::cout << "Canvas must be color in order to use the pencil" << std::endl;
+        return;
     }
+
+    int x = event->pos().x() / 50;
+    int y = event->pos().y() / 50;
+
+    m_colorCanvas->mouseMove(x, y);
+    colorCanvas();
 }
 
 void SupportCanvas2D::mouseReleaseEvent(QMouseEvent *event) {
-    // Move the mouse again in case this event is at a different position then the last event.
-    mouseMoveEvent(event);
-
-    if (m_canvasType == "color") {
-        int x = event->pos().x() / 50;
-        int y = event->pos().y() / 50;
-
-        m_colorCanvas->mouseUp(x, y);
-        colorCanvas();
+    if (m_canvasType == "grayscale") {
+        std::cout << "Canvas must be color in order to use the pencil" << std::endl;
+        return;
     }
+
+    int x = event->pos().x() / 50;
+    int y = event->pos().y() / 50;
+
+    m_colorCanvas->mouseUp(x, y);
+    colorCanvas();
 }
 
 SupportCanvas2D::~SupportCanvas2D()
