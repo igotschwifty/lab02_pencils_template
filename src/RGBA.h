@@ -1,8 +1,10 @@
 #pragma once
 
+#include <cstdint>
+
 struct RGBA {
-    int r;
-    int g;
-    int b;
-    int a;
+    std::uint8_t r;
+    std::uint8_t g;
+    std::uint8_t b;
+    std::uint8_t a = 255;
 };
