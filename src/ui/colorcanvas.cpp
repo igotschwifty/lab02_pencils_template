@@ -21,12 +21,12 @@ void ColorCanvas::drawFlower(int x, int y) {
 }
 
 void ColorCanvas::mouseDown(int x, int y) {
-    // Task 10: color the pixel corresponding to the inputted (x, y) coordinate
+    // Task 10: color the pixel corresponding to the input (x, y) coordinate
     //          of the canvas to handle when the mouse is clicked
 }
 
 void ColorCanvas::mouseMove(int x, int y) {
-    // Task 9: color the pixel corresponding to the inputted (x, y) coordinate
+    // Task 9: color the pixel corresponding to the input (x, y) coordinate
     //         of the canvas to handle mouse movement
 
     // Task 10: update this function from the previous task so that the coloring
